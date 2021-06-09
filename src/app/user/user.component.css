@@ -1,0 +1,60 @@
+* {
+  color: #fff;
+}
+
+h1 {
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+.titulo {
+  font-size: 18px;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 11px;
+  margin-bottom: 18px;
+}
+
+.iconDown {
+  font-size: 29px;
+  margin-right: 12px;
+}
+
+p {
+  font-size: 18px;
+}
+.bio{
+    margin-left: 12px;
+}
+.card-black {
+  padding: 16px;
+  width: 98%;
+  margin: auto;
+  background-color: #404040;
+  display: flex;
+  justify-content: space-between;
+}
+
+#graph {
+  padding: 16px;
+  width: 54%;
+  background-color: #0e0f10;
+}
+
+#card-repo {
+  padding: 16px;
+  width: 30%;
+  background-color: #0e0f10;
+  margin-bottom: 20px;
+}
+
+#langue {
+  padding: 16px;
+  width: 44%;
+  background-color: #0e0f10;
+}
+
+.icon {
+  color: #468754;
+  margin-right: 10px;
+}

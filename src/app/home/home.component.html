@@ -1,0 +1,35 @@
+<div class="main">
+  <div class="banner">
+    <h1>
+      Stalk people on<br />
+      github!
+    </h1>
+    <img
+      src="https://camo.githubusercontent.com/31efe6953a0d3bca95789dbd815a46276636de6c6fe0d326dcc3d86b159d16c3/68747470733a2f2f746563686372756e63682e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031302f30372f6769746875622d6c6f676f2e706e673f773d3733302663726f703d31"
+      alt=""
+    />
+  </div>
+
+  <div class="top-user">
+    <h1>Top users</h1>
+    <div>
+      <div class="row row-cols-1 row-cols-md-4 g-5">
+        <div *ngFor="let user of users" class="col">
+          <div class="card curso" (click)="onUserClick(user.login)">
+            <img src="{{ user.avatar_url }}" class="card-img-top" alt="" />
+            <div class="card-body">
+              <h5 class="card-title">{{ user.login }}</h5>
+              <a
+                class="ml-2"
+                [href]="user.html_url"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Acesse ao repositorio</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

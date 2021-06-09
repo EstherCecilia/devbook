@@ -1,0 +1,65 @@
+<div class="main">
+  <h1>{{user.nome}}</h1>
+
+  <span class="bio">{{user.bio}}</span>
+
+  <div>
+    <div class="titulo">
+      <fa-icon class="iconDown" [icon]="faSortDown"></fa-icon>
+      <span>GitHub stats</span>
+    </div>
+
+    <div class="card-black">
+      <div id="graph">
+        <p>{{user.login}} GitHub Stats</p>
+        <div>
+          <fa-icon class="icon" [icon]="faStar"></fa-icon>
+          <span>Repositorios públicos: {{user.public_repos}}</span>
+        </div>
+        <div>
+          <fa-icon class="icon" [icon]="faHistory"></fa-icon>
+          <span>Followers: {{user.followers}}</span>
+        </div>
+        <div>
+          <fa-icon class="icon" [icon]="faCodeBranch"></fa-icon>
+          <span>Following: {{user.following}}</span>
+        </div>
+        <!-- <div>
+          <fa-icon class="icon" [icon]="faClock"></fa-icon>
+          <span>Total Issues: 0</span>
+        </div>
+        <div>
+          <fa-icon class="icon" [icon]="faBook"></fa-icon>
+          <span>Contributted to: 4</span>
+        </div> -->
+      </div>
+      <div id="langue">
+        <p>Top Languages</p>
+        <progress value="32" max="100">32%</progress>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="titulo">
+      <fa-icon class="iconDown" [icon]="faSortDown"></fa-icon>
+      <span>Repos</span>
+    </div>
+
+    <div class="card-black flex-wrap">
+      <div *ngFor="let repo of repos" id="card-repo">
+        <div>
+            <fa-icon class="icon" [icon]="faBook"></fa-icon>
+            <span>{{repo.name}}</span>
+          </div>
+
+          <a class="ml-2" [href]="repo.html_url" target="_blank" rel="noopener noreferrer">Acesse ao repositorio</a>
+
+          <div>
+            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+            <span>Linguagem principal: {{repo.language}}</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
